@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Site address: https://lglielmo.github.io/
+     If you later add a custom domain (e.g. https://luigiglielmo.it/),
+     update og:url and canonical below to match. -->
+
+<title>Luigi Glielmo — Automatic Control, University of Naples Federico II</title>
+<meta name="description" content="Luigi Glielmo, Professor of Automatic Control at DIETI, University of Naples Federico II. Research on predictive and learning-based control, energy systems, automotive control, and Boolean networks.">
+<meta name="author" content="Luigi Glielmo">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Luigi Glielmo — Automatic Control, University of Naples Federico II">
+<meta property="og:description" content="Professor of Automatic Control. Predictive &amp; learning-based control, energy systems, automotive control, Boolean networks.">
+<meta property="og:url" content="https://lglielmo.github.io/">
+<link rel="canonical" href="https://lglielmo.github.io/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Luigi Glielmo",
+  "url": "https://lglielmo.github.io/",
+  "jobTitle": "Professor of Automatic Control",
+  "worksFor": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Naples Federico II",
+    "department": "DIETI — Department of Electrical Engineering and Information Technologies"
+  },
+  "email": "mailto:luigi.glielmo@unina.it",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "ORCID",
+    "value": "0000-0003-2753-1787"
+  },
+  "sameAs": [
+    "https://orcid.org/0000-0003-2753-1787",
+    "https://scholar.google.it/citations?hl=it&user=4g8o0yUAAAAJ",
+    "https://www.scopus.com/authid/detail.uri?authorId=6603819476",
+    "https://www.researchgate.net/profile/Luigi-Glielmo",
+    "https://www.linkedin.com/in/luigi-glielmo-62158b10",
+    "https://github.com/LGlielmo"
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --paper:#F6F7F9;
+    --panel:#FFFFFF;
+    --ink:#12161F;
+    --muted:#5A6472;
+    --line:#E1E4EA;
+    --accent:#0B6E6B;
+    --accent-bright:#0E8F8B;
+    --maxw:1000px;
+    --pad:clamp(20px,5vw,40px);
+    --font-display:"Space Grotesk",system-ui,sans-serif;
+    --font-body:"Source Serif 4",Georgia,serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{color:var(--accent-bright);text-decoration:underline;text-underline-offset:3px}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+  /* ---- Nav ---- */
+  .nav{
+    position:sticky;top:0;z-index:20;
+    background:rgba(246,247,249,.86);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav .wrap{display:flex;align-items:center;gap:24px;height:58px}
+  .brand{font-family:var(--font-display);font-weight:600;letter-spacing:-.01em;font-size:16px;white-space:nowrap}
+  .navlinks{
+    margin-left:auto;display:flex;gap:20px;overflow-x:auto;scrollbar-width:none;
+    font-family:var(--font-mono);font-size:12.5px;letter-spacing:.02em;
+  }
+  .navlinks::-webkit-scrollbar{display:none}
+  .navlinks a{color:var(--muted);white-space:nowrap;text-transform:lowercase}
+  .navlinks a:hover{color:var(--ink);text-decoration:none}
+
+  /* ---- Hero ---- */
+  .hero{padding:clamp(48px,8vw,84px) 0 clamp(40px,6vw,64px)}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,56px);align-items:center}
+  .eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+  h1{
+    font-family:var(--font-display);font-weight:600;letter-spacing:-.02em;
+    font-size:clamp(38px,7vw,60px);line-height:1.02;margin:.35em 0 .3em;
+  }
+  .role{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:34ch}
+  .role strong{color:var(--ink);font-weight:600}
+  .profiles{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+  .profiles a{
+    font-family:var(--font-mono);font-size:12.5px;letter-spacing:.02em;
+    border:1px solid var(--line);background:var(--panel);color:var(--ink);
+    padding:7px 13px;border-radius:100px;
+  }
+  .profiles a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+  /* ---- Hero signature: step response ---- */
+  .signature{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 14px}
+  .signature figcaption{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;display:flex;justify-content:space-between}
+  svg.plot{display:block;width:100%;height:auto}
+  .response-line{
+    fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;
+    pathLength:1;stroke-dasharray:1;stroke-dashoffset:0;
+  }
+  .axis{stroke:var(--line);stroke-width:1.5}
+  .setpoint{stroke:var(--accent);stroke-width:1;stroke-dasharray:3 4;opacity:.45}
+  .tick{font-family:var(--font-mono);font-size:10px;fill:var(--muted)}
+  .readouts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;border-top:1px solid var(--line);padding-top:14px}
+  .readout .num{font-family:var(--font-mono);font-weight:500;font-size:22px;color:var(--ink);line-height:1}
+  .readout .lbl{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+  @media (prefers-reduced-motion: no-preference){
+    .response-line{animation:draw 2.1s cubic-bezier(.6,.05,.25,1) .25s both}
+    @keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+  }
+
+  /* ---- Sections ---- */
+  section{padding:clamp(40px,6vw,68px) 0;border-top:1px solid var(--line);scroll-margin-top:70px}
+  .sec-head{margin-bottom:30px}
+  .sec-head h2{font-family:var(--font-display);font-weight:600;letter-spacing:-.01em;font-size:clamp(24px,3.5vw,30px);margin:.3em 0 0}
+  .lead{font-size:19px;max-width:64ch}
+
+  /* Research themes */
+  .themes{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .theme{background:var(--panel);padding:24px}
+  .theme h3{font-family:var(--font-display);font-weight:600;font-size:17px;margin:0 0 8px}
+  .theme p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.55}
+
+  /* Publications */
+  .pub{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .pub:last-of-type{border-bottom:none}
+  .pub .yr{font-family:var(--font-mono);font-size:13px;color:var(--accent);padding-top:2px}
+  .pub .cite{font-size:16px}
+  .pub .venue{color:var(--muted);font-style:italic}
+  .allpubs{margin-top:20px;font-family:var(--font-mono);font-size:13px}
+
+  /* Alumni */
+  .alumni{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 34px}
+  .alum{border-left:2px solid var(--line);padding:2px 0 2px 14px}
+  .alum .nm{font-family:var(--font-display);font-weight:500;font-size:15.5px}
+  .alum .role2{color:var(--muted);font-size:14px}
+
+  /* Two-column generic */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px 44px}
+  .block h3{font-family:var(--font-display);font-weight:600;font-size:15px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+  ul.clean{list-style:none;margin:0;padding:0}
+  ul.clean li{padding:7px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+  ul.clean li:last-child{border-bottom:none}
+  ul.clean .tag{font-family:var(--font-mono);font-size:12px;color:var(--accent);margin-right:8px}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 44px}
+  .contact-grid .k{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .contact-grid .v{margin:3px 0 16px}
+
+  footer{border-top:1px solid var(--line);padding:26px 0 46px;color:var(--muted);font-family:var(--font-mono);font-size:12px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+
+  @media (max-width:720px){
+    body{font-size:16px}
+    .hero-grid{grid-template-columns:1fr;gap:34px}
+    .themes,.alumni,.cols,.contact-grid{grid-template-columns:1fr}
+    .pub{grid-template-columns:52px 1fr;gap:12px}
+    .brand{font-size:15px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <span class="brand">Luigi Glielmo</span>
+    <div class="navlinks">
+      <a href="#about">about</a>
+      <a href="#research">research</a>
+      <a href="#publications">publications</a>
+      <a href="#group">group</a>
+      <a href="#projects">projects</a>
+      <a href="#service">service</a>
+      <a href="#teaching">teaching</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Automatic Control</span>
+      <h1>Luigi Glielmo</h1>
+      <p class="role"><strong>Professor of Automatic Control</strong>, DIETI, University of Naples Federico II — Napoli, Italy.</p>
+      <div class="profiles">
+        <a href="https://orcid.org/0000-0003-2753-1787" rel="me">ORCID</a>
+        <a href="https://scholar.google.it/citations?hl=it&amp;user=4g8o0yUAAAAJ" rel="me">Google Scholar</a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=6603819476" rel="me">Scopus</a>
+        <a href="https://www.researchgate.net/profile/Luigi-Glielmo" rel="me">ResearchGate</a>
+        <a href="https://www.linkedin.com/in/luigi-glielmo-62158b10" rel="me">LinkedIn</a>
+      </div>
+    </div>
+
+    <figure class="signature" style="margin:0">
+      <figcaption><span>Step response</span><span>settling to setpoint</span></figcaption>
+      <svg class="plot" viewBox="0 0 440 300" role="img" aria-label="Underdamped step response settling to its setpoint — a nod to the field of automatic control">
+        <!-- axes -->
+        <path class="axis" d="M40,20 L40,262 L420,262"/>
+        <!-- setpoint -->
+        <line class="setpoint" x1="40" y1="120" x2="420" y2="120"/>
+        <text class="tick" x="46" y="116">setpoint</text>
+        <text class="tick" x="404" y="278">t</text>
+        <!-- response curve -->
+        <path class="response-line" d="M40,262 L60,250 L78,224 L96,176 L112,134 L128,102 L150,83 L168,91 L188,107 L210,128 L232,139 L252,134 L276,123 L300,117 L326,121 L360,120 L420,120"/>
+      </svg>
+      <div class="readouts">
+        <div class="readout"><div class="num">42</div><div class="lbl">h-index</div></div>
+        <div class="readout"><div class="num">8600+</div><div class="lbl">citations</div></div>
+        <div class="readout"><div class="num">220+</div><div class="lbl">papers</div></div>
+      </div>
+    </figure>
+  </div>
+</header>
+
+<main>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">About</span></div>
+    <p class="lead">Luigi Glielmo earned his laurea in Electronic Engineering and his doctorate in Automatic Control at the University of Naples Federico II. His career has spanned Federico II, the University of Palermo, and more than two decades at the University of Sannio — where he founded GRACE, the Group for Research on Automatic Control Engineering — before returning to Federico II in 2022.</p>
+    <p class="lead">His research moves across singular perturbation methods, predictive and learning-based control, automotive systems, smart grids and energy communities, hydrogen storage, Boolean control networks, and deep brain stimulation. He has co-authored more than 220 papers, edited two books for Springer, and holds two patents. A Senior Member of IEEE and member of SIAM, he is Senior Editor of <em>IEEE Transactions on Control Systems Technology</em> and Vice-Chair of the Conference Board of IFAC.</p>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Research</span>
+      <h2>Themes</h2>
+    </div>
+    <div class="themes">
+      <div class="theme">
+        <h3>Predictive &amp; learning-based control</h3>
+        <p>Model predictive and Learning MPC for tasks that repeat: building safe sets and value functions from data so a controller improves itself iteration after iteration, with recursive feasibility and stability intact. Current threads include reduced-order and distributed Learning MPC.</p>
+      </div>
+      <div class="theme">
+        <h3>Smart grids &amp; energy communities</h3>
+        <p>Optimization-based operation of microgrids and renewable energy communities — from stochastic MPC to experimental deployments — aimed at efficient, verifiable dispatch under uncertainty.</p>
+      </div>
+      <div class="theme">
+        <h3>Hydrogen &amp; renewable energy systems</h3>
+        <p>Control architectures pairing wind generation with hydrogen storage and electrolysers, coordinating production and smooth grid injection through hierarchical predictive control.</p>
+      </div>
+      <div class="theme">
+        <h3>Automotive &amp; vehicle control</h3>
+        <p>Powertrain and vehicle-dynamics control: catalytic-converter warm-up, battery state estimation, automated gearshift, and energy management for hybrid and electric vehicles.</p>
+      </div>
+      <div class="theme">
+        <h3>Boolean control networks</h3>
+        <p>Feedback stabilization, output tracking, and reinforcement-learning-based control of probabilistic Boolean networks — discrete models of gene-regulatory and logical systems.</p>
+      </div>
+      <div class="theme">
+        <h3>Biomedical systems &amp; systems biology</h3>
+        <p>Modeling and closed-loop control in the life sciences: deep brain stimulation for Parkinson's disease, and the auto-regulation of secretory protein transport in the cell.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Publications</span>
+      <h2>Selected papers</h2>
+    </div>
+
+    <div class="pub"><div class="yr">2024</div><div class="cite">E. Musicò, C. Ancona, F. Lo Iudice, L. Glielmo. An optimal control approach for enhancing efficiency in renewable energy communities. <span class="venue">IEEE Control Systems Letters.</span> <a href="https://doi.org/10.1109/LCSYS.2024.3521193">doi</a></div></div>
+
+    <div class="pub"><div class="yr">2024</div><div class="cite">M. B. Abdelghany, V. Mariani, D. Liuzza, O. R. Natale, L. Glielmo. A unified control platform and architecture for the integration of wind–hydrogen systems into the grid. <span class="venue">IEEE Trans. Automation Science and Engineering, 21(3).</span> <a href="https://doi.org/10.1109/TASE.2023.3292029">doi</a></div></div>
+
+    <div class="pub"><div class="yr">2024</div><div class="cite">M. B. Abdelghany, V. Mariani, D. Liuzza, L. Glielmo. Hierarchical model predictive control for islanded and grid-connected microgrids with wind generation and hydrogen energy storage. <span class="venue">Int. J. Hydrogen Energy, 51.</span> <a href="https://doi.org/10.1016/j.ijhydene.2023.08.056">doi</a></div></div>
+
+    <div class="pub"><div class="yr">2023</div><div class="cite">L. Russo, S. H. Nair, L. Glielmo, F. Borrelli. Learning for online mixed-integer model predictive control with parametric optimality certificates. <span class="venue">IEEE Control Systems Letters, 7.</span> <a href="https://doi.org/10.1109/LCSYS.2023.3285778">doi</a></div></div>
+
+    <div class="pub"><div class="yr">2023</div><div class="cite">A. Joshi, M. Tipaldi, L. Glielmo. A consensus Q-learning approach for decentralized control of shared energy storage. <span class="venue">IEEE Control Systems Letters, 7.</span> <a href="https://doi.org/10.1109/LCSYS.2023.3329072">doi</a></div></div>
+
+    <div class="pub"><div class="yr">2020</div><div class="cite">A. Yerudkar, C. Del Vecchio, L. Glielmo. Feedback stabilization control design for switched Boolean control networks. <span class="venue">Automatica, 116.</span> <a href="https://doi.org/10.1016/j.automatica.2020.108934">doi</a></div></div>
+
+    <div class="pub"><div class="yr">2019</div><div class="cite">A. Subramanian, … L. Glielmo, … A. Luini. Auto-regulation of secretory flux by sensing and responding to the folded cargo protein load in the endoplasmic reticulum. <span class="venue">Cell, 176(6).</span> <a href="https://doi.org/10.1016/j.cell.2019.01.035">doi</a></div></div>
+
+    <div class="pub"><div class="yr">2014</div><div class="cite">A. Parisio, E. Rikos, L. Glielmo. A model predictive control approach to microgrid operation optimization. <span class="venue">IEEE Trans. Control Systems Technology, 22(5).</span> <a href="https://doi.org/10.1109/TCST.2013.2295737">doi</a></div></div>
+
+    <div class="pub"><div class="yr">2011</div><div class="cite">S. Santaniello, G. Fiengo, L. Glielmo, W. M. Grill. Closed-loop control of deep brain stimulation: a simulation study. <span class="venue">IEEE Trans. Neural Systems and Rehabilitation Engineering, 19(1).</span> <a href="https://doi.org/10.1109/TNSRE.2010.2081377">doi</a></div></div>
+
+    <div class="pub"><div class="yr">1992</div><div class="cite">M. Corless, L. Glielmo. On the exponential stability of singularly perturbed systems. <span class="venue">SIAM J. Control and Optimization, 30(6).</span> <a href="https://doi.org/10.1137/0330071">doi</a></div></div>
+
+    <p class="allpubs">→ Full list on <a href="https://orcid.org/0000-0003-2753-1787">ORCID</a>, <a href="https://scholar.google.it/citations?hl=it&amp;user=4g8o0yUAAAAJ">Google Scholar</a> and <a href="https://www.scopus.com/authid/detail.uri?authorId=6603819476">Scopus</a>.</p>
+  </div>
+</section>
+
+<section id="group">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Group</span>
+      <h2>Doctoral alumni</h2>
+    </div>
+    <p class="lead" style="margin-bottom:28px">Nineteen doctoral students have completed their degrees under his supervision, with others currently in progress. A selection of where they are now:</p>
+    <div class="alumni">
+      <div class="alum"><div class="nm">Stefania Santini</div><div class="role2">Professor, University of Naples Federico II</div></div>
+      <div class="alum"><div class="nm">Alessandra Parisio</div><div class="role2">Professor, University of Manchester</div></div>
+      <div class="alum"><div class="nm">Sabato Santaniello</div><div class="role2">Associate Professor, University of Connecticut</div></div>
+      <div class="alum"><div class="nm">Carmen Del Vecchio</div><div class="role2">Associate Professor, University of Sannio</div></div>
+      <div class="alum"><div class="nm">Amol Yerudkar</div><div class="role2">Professor, Zhejiang Normal University</div></div>
+      <div class="alum"><div class="nm">Giovanni Fiengo</div><div class="role2">CEO, Kineton</div></div>
+      <div class="alum"><div class="nm">Alessandro Di Gaeta</div><div class="role2">Researcher, Italian National Research Council (CNR)</div></div>
+      <div class="alum"><div class="nm">Alessio Maffei</div><div class="role2">Expert, Banca d'Italia</div></div>
+      <div class="alum"><div class="nm">Daniela Meola</div><div class="role2">Control Systems Engineer, General Motors</div></div>
+      <div class="alum"><div class="nm">Gilda Pedoto</div><div class="role2">Lead Engineer, General Electric</div></div>
+      <div class="alum"><div class="nm">Ali Forootani</div><div class="role2">Postdoctoral Researcher, UFZ Leipzig</div></div>
+      <div class="alum"><div class="nm">M. Bakr Abdelghany</div><div class="role2">Postdoctoral Researcher, Khalifa University</div></div>
+      <div class="alum"><div class="nm">Amin Bassiri</div><div class="role2">Postdoctoral Researcher, TH Ingolstadt</div></div>
+      <div class="alum"><div class="nm">Giovanni Palmieri</div><div class="role2">Senior Control Consultant, Garrett — Advancing Motion</div></div>
+      <div class="alum"><div class="nm">Francesca Verrilli</div><div class="role2">Solution Building Engineer, Sopra Steria</div></div>
+      <div class="alum"><div class="nm">Massimo Tipaldi</div><div class="role2">Research consultant</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Projects</span>
+      <h2>Selected funded research</h2>
+    </div>
+    <div class="cols">
+      <div class="block">
+        <h3>European</h3>
+        <ul class="clean">
+          <li><span class="tag">H2020</span>HAEOLUS — hydrogen-aeolic energy with optimised electrolysers upstream of substation (local PI, 2018–2023)</li>
+          <li><span class="tag">H2020</span>AFarCloud — aggregate farming in the cloud (local PI, 2019–2021)</li>
+          <li><span class="tag">FP7</span>I3RES — intelligent management of integrated RES for the smart grid (local PI, 2012–2015)</li>
+          <li><span class="tag">ARTEMIS</span>e-Gotham — smart-grid open system for aggregated energy control (Italian coordinator, 2012–2015)</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>National</h3>
+        <ul class="clean">
+          <li><span class="tag">PI</span>MANTEIA — early fault detection for thermal energy storage (2024–2025)</li>
+          <li><span class="tag">PRIN</span>ECODREAM — distributed algorithms for energy-community management (PI, 2023–2025)</li>
+          <li><span class="tag">MISE</span>Veritas — precision viticulture (PI for automation, 2020–2023)</li>
+          <li><span class="tag">PRIN</span>Vectors — advanced control of future smart grids (local PI, 2019–2023)</li>
+        </ul>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:26px;color:var(--muted)">Principal investigator or co-PI on research funding exceeding €5,000,000.</p>
+  </div>
+</section>
+
+<section id="service">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Service</span>
+      <h2>Editorial &amp; professional roles</h2>
+    </div>
+    <div class="cols">
+      <div class="block">
+        <h3>Editorial</h3>
+        <ul class="clean">
+          <li>Senior Editor, IEEE Trans. Control Systems Technology (2026–)</li>
+          <li>Associate Editor, IEEE Control Systems Letters (2017–2022)</li>
+          <li>Associate Editor, IEEE Trans. Automatic Control (2002–2006)</li>
+          <li>Associate Editor, Encyclopedia of Systems and Control — Automotive section (Springer, 2015 &amp; 2020)</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>Professional bodies &amp; conferences</h3>
+        <ul class="clean">
+          <li>Vice-Chair, Conference Board of IFAC (2023–)</li>
+          <li>Founding Chair, IEEE CSS Technical Committee on Automotive Controls (2001–2004)</li>
+          <li>General Co-Chair, European Control Conference 2019, Naples</li>
+          <li>Senior Member, IEEE · Member, SIAM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Teaching</span>
+      <h2>Courses</h2>
+    </div>
+    <p class="lead">At Federico II his teaching runs from System Theory through Advanced Control Methods and Applications to Learning for Dynamics and Control. He has also delivered graduate short courses internationally, including <em>From convex optimization to reinforcement learning</em> at Zhejiang Normal University (2024) and Université Grenoble Alpes (2024), and <em>Control of energy systems</em> at Johannes Kepler Universität Linz (2016–2021).</p>
+    <p class="lead" style="color:var(--muted)">An intensive Learning MPC course is in preparation for summer delivery. Prospective PhD students with a background in control, optimization, or applied mathematics are welcome to get in touch.</p>
+  </div>
+</section>
+
+<section id="books">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Books &amp; patents</span>
+    </div>
+    <div class="cols">
+      <div class="block">
+        <h3>Edited volumes</h3>
+        <ul class="clean">
+          <li>L. del Re, F. Allgöwer, L. Glielmo, C. Guardiola, I. Kolmanovsky (eds.). <em>Automotive Model Predictive Control.</em> Springer, 2010.</li>
+          <li>F. Garofalo, L. Glielmo (eds.). <em>Robust Control via Variable Structure and Lyapunov Techniques.</em> Springer, 1996.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>Patents</h3>
+        <ul class="clean">
+          <li>Retractor system for surgical applications for detecting characteristic parameters of organic tissues. US20090259106A1.</li>
+          <li>System for remotely controlling and monitoring a food refrigerator and its content. US20090282859A1.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Contact</span>
+      <h2>Get in touch</h2>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="k">Email</div>
+        <div class="v"><a href="mailto:luigi.glielmo@unina.it">luigi.glielmo@unina.it</a></div>
+        <div class="k">Office</div>
+        <div class="v">DIETI — Department of Electrical Engineering and Information Technologies<br>University of Naples Federico II, Napoli, Italy</div>
+      </div>
+      <div>
+        <div class="k">Telephone</div>
+        <div class="v">+39 081 7683844 &nbsp;·&nbsp; mobile +39 345 3488396</div>
+        <div class="k">ORCID</div>
+        <div class="v"><a href="https://orcid.org/0000-0003-2753-1787" rel="me">0000-0003-2753-1787</a></div>
+        <div class="k">Profiles</div>
+        <div class="v">
+          <a href="https://scholar.google.it/citations?hl=it&amp;user=4g8o0yUAAAAJ">Google Scholar</a> ·
+          <a href="https://www.scopus.com/authid/detail.uri?authorId=6603819476">Scopus</a> ·
+          <a href="https://www.researchgate.net/profile/Luigi-Glielmo">ResearchGate</a> ·
+          <a href="https://www.linkedin.com/in/luigi-glielmo-62158b10">LinkedIn</a> ·
+          <a href="https://github.com/LGlielmo" rel="me">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;width:100%;padding:0 var(--pad)">
+    <span>© 2026 Luigi Glielmo</span>
+    <span>DIETI · University of Naples Federico II</span>
+  </div>
+</footer>
+
+</body>
+</html>
