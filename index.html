@@ -158,6 +158,24 @@
   .pub .cite{font-size:16px}
   .pub .venue{color:var(--muted);font-style:italic}
   .allpubs{margin-top:20px;font-family:var(--font-mono);font-size:13px}
+  .metrics{font-family:var(--font-mono);font-size:13px;color:var(--muted);margin:10px 0 0}
+  .metrics b{color:var(--ink);font-weight:500}
+  .subhead{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:42px 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .subhead:first-of-type{margin-top:8px}
+  .pub .new{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--accent);border-radius:4px;padding:1px 6px;margin-right:6px;vertical-align:1px}
+  .pub.cited{grid-template-columns:64px 1fr 74px}
+  .pub .cn{font-family:var(--font-mono);font-size:13px;color:var(--ink);text-align:right;padding-top:2px;white-space:nowrap}
+  .pub .cn small{display:block;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .pubthemes{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  .pubtheme{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+  .pubtheme h3{font-family:var(--font-display);font-weight:600;font-size:16px;margin:0 0 10px}
+  .pubtheme ul{list-style:none;margin:0;padding:0}
+  .pubtheme li{font-size:14.5px;line-height:1.5;padding:8px 0;border-top:1px solid var(--line)}
+  .pubtheme li:first-child{border-top:none;padding-top:0}
+  .pubtheme .y{font-family:var(--font-mono);font-size:12px;color:var(--accent);margin-right:6px}
+  .pubtheme .venue{color:var(--muted);font-style:italic}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+  .chips span{font-family:var(--font-mono);font-size:12px;border:1px solid var(--line);background:var(--panel);border-radius:100px;padding:5px 11px;color:var(--ink)}
 
   /* Alumni */
   .alumni{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 34px}
@@ -183,7 +201,8 @@
   @media (max-width:720px){
     body{font-size:16px}
     .hero-grid{grid-template-columns:1fr;gap:34px}
-    .themes,.alumni,.cols,.contact-grid{grid-template-columns:1fr}
+    .themes,.alumni,.cols,.contact-grid,.pubthemes{grid-template-columns:1fr}
+    .pub.cited{grid-template-columns:52px 1fr 58px}
     .pub{grid-template-columns:52px 1fr;gap:12px}
     .brand{font-size:15px}
   }
@@ -235,8 +254,8 @@
         <path class="response-line" d="M40,262 L60,250 L78,224 L96,176 L112,134 L128,102 L150,83 L168,91 L188,107 L210,128 L232,139 L252,134 L276,123 L300,117 L326,121 L360,120 L420,120"/>
       </svg>
       <div class="readouts">
-        <div class="readout"><div class="num">42</div><div class="lbl">h-index</div></div>
-        <div class="readout"><div class="num">8600+</div><div class="lbl">citations</div></div>
+        <div class="readout"><div class="num">43</div><div class="lbl">h-index</div></div>
+        <div class="readout"><div class="num">9400+</div><div class="lbl">citations</div></div>
         <div class="readout"><div class="num">220+</div><div class="lbl">papers</div></div>
       </div>
     </figure>
@@ -281,9 +300,12 @@
         <p>Feedback stabilization, output tracking, and reinforcement-learning-based control of probabilistic Boolean networks — discrete models of gene-regulatory and logical systems.</p>
       </div>
       <div class="theme">
-        <h3>Biomedical systems &amp; systems biology</h3>
-        <p>Modeling and closed-loop control in the life sciences: deep brain stimulation for Parkinson's disease, and the auto-regulation of secretory protein transport in the cell.</p>
+        <h3>Biomedical systems</h3>
+        <p>Modeling and closed-loop control in the life sciences, notably deep brain stimulation for Parkinson's disease.</p>
       </div>
+    </div>
+    <div class="chips" aria-label="Areas of expertise">
+      <span>Model predictive control</span><span>Learning MPC</span><span>Reinforcement learning</span><span>Multi-agent systems</span><span>Distributed optimization</span><span>Renewable energy communities</span><span>Battery &amp; hydrogen storage</span><span>Lithium-ion battery modeling</span><span>Smart grids &amp; microgrids</span><span>Electric &amp; hybrid vehicles</span><span>Railway virtual coupling</span><span>Precision agriculture &amp; UAVs</span><span>Fault detection &amp; diagnosis</span><span>Boolean control networks</span><span>Singular perturbations</span>
     </div>
   </div>
 </section>
@@ -292,30 +314,120 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Publications</span>
-      <h2>Selected papers</h2>
+      <h2>Research output</h2>
+      <p class="metrics"><b>220+</b> papers · <b>9,400+</b> citations · h-index <b>43</b> · i10-index <b>146</b> &nbsp;<span style="opacity:.75">(Google Scholar, November 2026)</span></p>
     </div>
 
-    <div class="pub"><div class="yr">2024</div><div class="cite">E. Musicò, C. Ancona, F. Lo Iudice, L. Glielmo. An optimal control approach for enhancing efficiency in renewable energy communities. <span class="venue">IEEE Control Systems Letters.</span> <a href="https://doi.org/10.1109/LCSYS.2024.3521193">doi</a></div></div>
+    <h3 class="subhead">Latest work · 2025–2026</h3>
 
-    <div class="pub"><div class="yr">2024</div><div class="cite">M. B. Abdelghany, V. Mariani, D. Liuzza, O. R. Natale, L. Glielmo. A unified control platform and architecture for the integration of wind–hydrogen systems into the grid. <span class="venue">IEEE Trans. Automation Science and Engineering, 21(3).</span> <a href="https://doi.org/10.1109/TASE.2023.3292029">doi</a></div></div>
+    <div class="pub"><div class="yr">2026</div><div class="cite"><span class="new">new</span>A. Joshi, L. Glielmo. <a href="https://scholar.google.com/scholar?q=%22A+reinforcement+learning+based+decision+support+system+for+multi-stage+rooftop+solar+panel+investment%22">A reinforcement learning based decision support system for multi-stage rooftop solar panel investment in a renewable energy community</a>. <span class="venue">Engineering Applications of Artificial Intelligence, 183, 116172.</span></div></div>
 
-    <div class="pub"><div class="yr">2024</div><div class="cite">M. B. Abdelghany, V. Mariani, D. Liuzza, L. Glielmo. Hierarchical model predictive control for islanded and grid-connected microgrids with wind generation and hydrogen energy storage. <span class="venue">Int. J. Hydrogen Energy, 51.</span> <a href="https://doi.org/10.1016/j.ijhydene.2023.08.056">doi</a></div></div>
+    <div class="pub"><div class="yr">2026</div><div class="cite"><span class="new">new</span>M. Terlizzi, L. Glielmo, D. Liuzza. <a href="https://scholar.google.com/scholar?q=%22A+Safe+and+Robust+Control+System+Architecture+for+Trains+Virtual+Coupling%22">A safe and robust control system architecture for trains virtual coupling</a>. <span class="venue">IEEE Transactions on Control Systems Technology.</span></div></div>
 
-    <div class="pub"><div class="yr">2023</div><div class="cite">L. Russo, S. H. Nair, L. Glielmo, F. Borrelli. Learning for online mixed-integer model predictive control with parametric optimality certificates. <span class="venue">IEEE Control Systems Letters, 7.</span> <a href="https://doi.org/10.1109/LCSYS.2023.3285778">doi</a></div></div>
+    <div class="pub"><div class="yr">2026</div><div class="cite"><span class="new">new</span>B. Huang, Y. Liu, A. Yerudkar, L. Glielmo, L. Tang, Y. Jiang. <a href="https://scholar.google.com/scholar?q=%22Distributed+Nonconvex+Optimization+for+Nitrogen+Fertilizer+Management+in+Field+Crops%22">Distributed nonconvex optimization for nitrogen fertilizer management in field crops</a>. <span class="venue">IEEE Transactions on Control of Network Systems.</span></div></div>
 
-    <div class="pub"><div class="yr">2023</div><div class="cite">A. Joshi, M. Tipaldi, L. Glielmo. A consensus Q-learning approach for decentralized control of shared energy storage. <span class="venue">IEEE Control Systems Letters, 7.</span> <a href="https://doi.org/10.1109/LCSYS.2023.3329072">doi</a></div></div>
+    <div class="pub"><div class="yr">2026</div><div class="cite"><span class="new">new</span>M. Tipaldi, E. Brescia, A. Joshi, P. R. Massenio, D. Naso, L. Glielmo. A multi-agent mean-field actor critic approach for shared battery energy storage systems. <span class="venue">Sustainable Energy, Grids and Networks, 47, 102506.</span> <a href="https://doi.org/10.1016/j.segan.2026.102506">doi</a></div></div>
 
-    <div class="pub"><div class="yr">2020</div><div class="cite">A. Yerudkar, C. Del Vecchio, L. Glielmo. Feedback stabilization control design for switched Boolean control networks. <span class="venue">Automatica, 116.</span> <a href="https://doi.org/10.1016/j.automatica.2020.108934">doi</a></div></div>
+    <div class="pub"><div class="yr">2026</div><div class="cite"><span class="new">new</span>A. Autieri, F. Lo Iudice, S. Onori, L. Glielmo. <a href="https://scholar.google.com/scholar?q=%22An+Observation-Oriented+Optimal+Finite+Difference+Discretization+of+the+Single+Particle+Model%22">An observation-oriented optimal finite difference discretization of the single particle model</a> (lithium-ion batteries). <span class="venue">34th Mediterranean Conference on Control and Automation (MED).</span></div></div>
 
-    <div class="pub"><div class="yr">2019</div><div class="cite">A. Subramanian, … L. Glielmo, … A. Luini. Auto-regulation of secretory flux by sensing and responding to the folded cargo protein load in the endoplasmic reticulum. <span class="venue">Cell, 176(6).</span> <a href="https://doi.org/10.1016/j.cell.2019.01.035">doi</a></div></div>
+    <div class="pub"><div class="yr">2025</div><div class="cite">A. Joshi, M. Tipaldi, L. Glielmo. <a href="https://scholar.google.com/scholar?q=%22A+belief-based+multi-agent+reinforcement+learning+approach+for+electric+vehicle+coordination%22">A belief-based multi-agent reinforcement learning approach for electric vehicle coordination in a residential community</a>. <span class="venue">Sustainable Energy, Grids and Networks, 43, 101790.</span></div></div>
 
-    <div class="pub"><div class="yr">2014</div><div class="cite">A. Parisio, E. Rikos, L. Glielmo. A model predictive control approach to microgrid operation optimization. <span class="venue">IEEE Trans. Control Systems Technology, 22(5).</span> <a href="https://doi.org/10.1109/TCST.2013.2295737">doi</a></div></div>
+    <div class="pub"><div class="yr">2025</div><div class="cite">A. Joshi, M. Tipaldi, L. Glielmo. <a href="https://scholar.google.com/scholar?q=%22Multi-agent+reinforcement+learning+for+decentralized+control+of+shared+battery+energy+storage+system+in+residential+community%22">Multi-agent reinforcement learning for decentralized control of shared battery energy storage system in residential community</a>. <span class="venue">Sustainable Energy, Grids and Networks, 41, 101627.</span></div></div>
 
-    <div class="pub"><div class="yr">2011</div><div class="cite">S. Santaniello, G. Fiengo, L. Glielmo, W. M. Grill. Closed-loop control of deep brain stimulation: a simulation study. <span class="venue">IEEE Trans. Neural Systems and Rehabilitation Engineering, 19(1).</span> <a href="https://doi.org/10.1109/TNSRE.2010.2081377">doi</a></div></div>
+    <div class="pub"><div class="yr">2025</div><div class="cite">M. Terlizzi, L. Glielmo, D. Liuzza. <a href="https://scholar.google.com/scholar?q=%22Trains+Virtual+Coupling+under+unreliable+communication%22">Trains virtual coupling under unreliable communication</a>. <span class="venue">64th IEEE Conference on Decision and Control (CDC).</span></div></div>
 
-    <div class="pub"><div class="yr">1992</div><div class="cite">M. Corless, L. Glielmo. On the exponential stability of singularly perturbed systems. <span class="venue">SIAM J. Control and Optimization, 30(6).</span> <a href="https://doi.org/10.1137/0330071">doi</a></div></div>
+    <div class="pub"><div class="yr">2025</div><div class="cite">M. P. Do, O. Sename, L. Glielmo, D. Kapsalis. <a href="https://scholar.google.com/scholar?q=%22A+structured+H+infinity+approach+to+Cooperative+Adaptive+Cruise+Control+of+heterogeneous+vehicles%22">A structured ℋ∞ approach to cooperative adaptive cruise control of heterogeneous vehicles</a>. <span class="venue">European Control Conference (ECC).</span></div></div>
 
-    <p class="allpubs">→ Full list on <a href="https://orcid.org/0000-0003-2753-1787">ORCID</a>, <a href="https://scholar.google.it/citations?hl=it&amp;user=4g8o0yUAAAAJ">Google Scholar</a> and <a href="https://www.scopus.com/authid/detail.uri?authorId=6603819476">Scopus</a>.</p>
+    <h3 class="subhead">Most cited</h3>
+
+    <div class="pub cited"><div class="yr">2014</div><div class="cite">A. Parisio, E. Rikos, L. Glielmo. A model predictive control approach to microgrid operation optimization. <span class="venue">IEEE Trans. Control Systems Technology, 22(5).</span> <a href="https://doi.org/10.1109/TCST.2013.2295737">doi</a></div><div class="cn">1292<small>cites</small></div></div>
+
+    <div class="pub cited"><div class="yr">1998</div><div class="cite">M. di Bernardo, F. Garofalo, L. Glielmo, F. Vasca. Switchings, bifurcations, and chaos in DC/DC converters. <span class="venue">IEEE Trans. Circuits and Systems I, 45(2).</span> <a href="https://doi.org/10.1109/81.661675">doi</a></div><div class="cn">409<small>cites</small></div></div>
+
+    <div class="pub cited"><div class="yr">2014</div><div class="cite">A. Parisio, E. Rikos, G. Tzamalis, L. Glielmo. Use of model predictive control for experimental microgrid optimization. <span class="venue">Applied Energy, 115.</span> <a href="https://doi.org/10.1016/j.apenergy.2013.10.027">doi</a></div><div class="cn">313<small>cites</small></div></div>
+
+    <div class="pub cited"><div class="yr">2006</div><div class="cite">L. Glielmo, L. Iannelli, V. Vacca, F. Vasca. Gearshift control for automated manual transmissions. <span class="venue">IEEE/ASME Trans. Mechatronics, 11(1).</span> <a href="https://doi.org/10.1109/TMECH.2005.863369">doi</a></div><div class="cn">304<small>cites</small></div></div>
+
+    <div class="pub cited"><div class="yr">2019</div><div class="cite">P. Daponte, L. De Vito, L. Glielmo, L. Iannelli, D. Liuzza, F. Picariello, et al. A review on the use of drones for precision agriculture. <span class="venue">IOP Conf. Series: Earth and Environmental Science, 275.</span> <a href="https://scholar.google.com/scholar?q=%22A+review+on+the+use+of+drones+for+precision+agriculture%22">scholar</a></div><div class="cn">301<small>cites</small></div></div>
+
+    <div class="pub cited"><div class="yr">2011</div><div class="cite">S. Santaniello, G. Fiengo, L. Glielmo, W. M. Grill. Closed-loop control of deep brain stimulation: a simulation study. <span class="venue">IEEE Trans. Neural Systems and Rehabilitation Engineering, 19(1).</span> <a href="https://doi.org/10.1109/TNSRE.2010.2081377">doi</a></div><div class="cn">258<small>cites</small></div></div>
+
+    <div class="pub cited"><div class="yr">2016</div><div class="cite">A. Parisio, E. Rikos, L. Glielmo. Stochastic model predictive control for economic/environmental operation management of microgrids: an experimental case study. <span class="venue">Journal of Process Control, 43.</span> <a href="https://doi.org/10.1016/j.jprocont.2016.04.008">doi</a></div><div class="cn">215<small>cites</small></div></div>
+
+    <div class="pub cited"><div class="yr">2017</div><div class="cite">F. Verrilli, S. Srinivasan, G. Gambino, et al., L. Glielmo. Model predictive control-based optimal operations of district heating system with thermal energy storage and flexible loads. <span class="venue">IEEE Trans. Automation Science and Engineering, 14(2).</span> <a href="https://doi.org/10.1109/TASE.2016.2618948">doi</a></div><div class="cn">198<small>cites</small></div></div>
+
+    <div class="pub cited"><div class="yr">2006</div><div class="cite">O. Barbarisi, F. Vasca, L. Glielmo. State of charge Kalman filter estimator for automotive batteries. <span class="venue">Control Engineering Practice, 14(3).</span> <a href="https://doi.org/10.1016/j.conengprac.2005.03.027">doi</a></div><div class="cn">193<small>cites</small></div></div>
+
+    <div class="pub cited"><div class="yr">2024</div><div class="cite">M. B. Abdelghany, V. Mariani, D. Liuzza, L. Glielmo. Hierarchical model predictive control for islanded and grid-connected microgrids with wind generation and hydrogen energy storage systems. <span class="venue">Int. J. Hydrogen Energy, 51.</span> <a href="https://doi.org/10.1016/j.ijhydene.2023.08.056">doi</a></div><div class="cn">114<small>cites</small></div></div>
+
+    <h3 class="subhead">Selected papers by theme</h3>
+
+    <div class="pubthemes">
+      <div class="pubtheme">
+        <h3>Energy communities, storage &amp; smart grids</h3>
+        <ul>
+          <li><span class="y">2024</span>E. Musicò, C. Ancona, F. Lo Iudice, L. Glielmo. An optimal control approach for enhancing efficiency in renewable energy communities. <span class="venue">IEEE Control Systems Letters, 8.</span> <a href="https://doi.org/10.1109/LCSYS.2024.3521193">doi</a></li>
+          <li><span class="y">2023</span>A. Joshi, M. Tipaldi, L. Glielmo. A consensus Q-learning approach for decentralized control of shared energy storage. <span class="venue">IEEE Control Systems Letters, 7.</span> <a href="https://doi.org/10.1109/LCSYS.2023.3329072">doi</a></li>
+          <li><span class="y">2020</span>M. A. Tajeddini, H. Kebriaei, L. Glielmo. Decentralized hierarchical planning of PEVs based on mean-field reverse Stackelberg game. <span class="venue">IEEE Trans. Automation Science and Engineering, 17(4).</span> <a href="https://doi.org/10.1109/TASE.2020.2986374">doi</a></li>
+        </ul>
+      </div>
+      <div class="pubtheme">
+        <h3>Hydrogen &amp; renewable integration</h3>
+        <ul>
+          <li><span class="y">2024</span>M. B. Abdelghany, V. Mariani, D. Liuzza, O. R. Natale, L. Glielmo. A unified control platform and architecture for the integration of wind–hydrogen systems into the grid. <span class="venue">IEEE Trans. Automation Science and Engineering, 21(3).</span> <a href="https://doi.org/10.1109/TASE.2023.3292029">doi</a></li>
+          <li><span class="y">2022</span>M. B. Abdelghany, M. F. Shehzad, V. Mariani, D. Liuzza, L. Glielmo. Two-stage model predictive control for a hydrogen-based storage system paired to a wind farm towards green hydrogen production for fuel cell electric vehicles. <span class="venue">Int. J. Hydrogen Energy, 47(75).</span> <a href="https://doi.org/10.1016/j.ijhydene.2022.07.136">doi</a></li>
+          <li><span class="y">2022</span>V. Mariani, F. Zenith, L. Glielmo. Operating hydrogen-based energy storage systems in wind farms for smooth power injection: a penalty fees aware model predictive control. <span class="venue">Energies, 15(17).</span> <a href="https://doi.org/10.3390/en15176307">doi</a></li>
+        </ul>
+      </div>
+      <div class="pubtheme">
+        <h3>Vehicles, railways &amp; mobility</h3>
+        <ul>
+          <li><span class="y">2024</span>J. Deng, M. Tipaldi, L. Glielmo, P. R. Massenio, L. del Re. A dynamic programming approach for energy management in hybrid electric vehicles under uncertain driving conditions. <span class="venue">Int. J. Systems Science, 55(7).</span> <a href="https://doi.org/10.1080/00207721.2024.2304666">doi</a></li>
+          <li><span class="y">2012</span>G. Palmieri, M. Barić, L. Glielmo, F. Borrelli. Robust vehicle lateral stabilisation via set-based methods for uncertain piecewise affine systems. <span class="venue">Vehicle System Dynamics, 50(6).</span> <a href="https://doi.org/10.1080/00423114.2012.666353">doi</a></li>
+          <li><span class="y">2007</span>G. Fiengo, L. Glielmo, F. Vasca. Control of auxiliary power unit for hybrid electric vehicles. <span class="venue">IEEE Trans. Control Systems Technology, 15(6).</span> <a href="https://doi.org/10.1109/TCST.2006.890301">doi</a></li>
+        </ul>
+      </div>
+      <div class="pubtheme">
+        <h3>Learning-based control &amp; decision-making</h3>
+        <ul>
+          <li><span class="y">2023</span>L. Russo, S. H. Nair, L. Glielmo, F. Borrelli. Learning for online mixed-integer model predictive control with parametric optimality certificates. <span class="venue">IEEE Control Systems Letters, 7.</span> <a href="https://doi.org/10.1109/LCSYS.2023.3285778">doi</a></li>
+          <li><span class="y">2021</span>A. Forootani, D. Liuzza, M. Tipaldi, L. Glielmo. Allocating resources via price management systems: a dynamic programming-based approach. <span class="venue">Int. J. Control, 94(8).</span> <a href="https://doi.org/10.1080/00207179.2019.1694178">doi</a></li>
+          <li><span class="y">2022</span>M. Mazzoleni, K. Sarda, A. Acernese, L. Russo, L. Manfredi, L. Glielmo, C. Del Vecchio. A fuzzy logic-based approach for fault diagnosis and condition monitoring of Industry 4.0 manufacturing processes. <span class="venue">Engineering Applications of Artificial Intelligence, 115.</span> <a href="https://doi.org/10.1016/j.engappai.2022.105317">doi</a></li>
+        </ul>
+      </div>
+      <div class="pubtheme">
+        <h3>Precision agriculture &amp; UAVs</h3>
+        <ul>
+          <li><span class="y">2022</span>A. P. Singh, A. Yerudkar, D. Liuzza, Y. Liu, L. Glielmo. An optimal decision support system based on crop dynamic model for N-fertilizer treatment. <span class="venue">Sensors, 22(19).</span> <a href="https://doi.org/10.3390/s22197613">doi</a></li>
+          <li><span class="y">2022</span>A. P. Singh, A. Yerudkar, V. Mariani, L. Iannelli, L. Glielmo. A bibliometric review of the use of unmanned aerial vehicles in precision agriculture and precision viticulture for sensing applications. <span class="venue">Remote Sensing, 14(7).</span> <a href="https://scholar.google.com/scholar?q=%22A+bibliometric+review+of+the+use+of+unmanned+aerial+vehicles+in+precision+agriculture%22">scholar</a></li>
+          <li><span class="y">2022</span>A. Basiri, V. Mariani, G. Silano, M. Aatif, L. Iannelli, L. Glielmo. A survey on the application of path-planning algorithms for multi-rotor UAVs in precision agriculture. <span class="venue">The Journal of Navigation, 75(2).</span> <a href="https://scholar.google.com/scholar?q=%22A+survey+on+the+application+of+path-planning+algorithms+for+multi-rotor+UAVs+in+precision+agriculture%22">scholar</a></li>
+        </ul>
+      </div>
+      <div class="pubtheme">
+        <h3>Boolean control networks</h3>
+        <ul>
+          <li><span class="y">2020</span>A. Yerudkar, C. Del Vecchio, L. Glielmo. Feedback stabilization control design for switched Boolean control networks. <span class="venue">Automatica, 116.</span> <a href="https://doi.org/10.1016/j.automatica.2020.108934">doi</a></li>
+          <li><span class="y">2021</span>A. Acernese, A. Yerudkar, L. Glielmo, C. Del Vecchio. Reinforcement learning approach to feedback stabilization problem of probabilistic Boolean control networks. <span class="venue">IEEE Control Systems Letters, 5(1).</span> <a href="https://doi.org/10.1109/LCSYS.2020.3001993">doi</a></li>
+          <li><span class="y">2022</span>Z. Zhou, Y. Liu, J. Lu, L. Glielmo. Cluster synchronization of Boolean networks under state-flipped control with reinforcement learning. <span class="venue">IEEE Trans. Circuits and Systems II, 69(12).</span> <a href="https://doi.org/10.1109/TCSII.2022.3199786">doi</a></li>
+        </ul>
+      </div>
+      <div class="pubtheme">
+        <h3>Life sciences</h3>
+        <ul>
+          <li><span class="y">2008</span>S. Santaniello, G. Fiengo, L. Glielmo, G. Catapano. A biophysically inspired microelectrode recording-based model for the subthalamic nucleus activity in Parkinson's disease. <span class="venue">Biomedical Signal Processing and Control, 3(3).</span> <a href="https://doi.org/10.1016/j.bspc.2008.03.001">doi</a></li>
+        </ul>
+      </div>
+      <div class="pubtheme">
+        <h3>Foundations: stability &amp; singular perturbations</h3>
+        <ul>
+          <li><span class="y">1992</span>M. Corless, L. Glielmo. On the exponential stability of singularly perturbed systems. <span class="venue">SIAM J. Control and Optimization, 30(6).</span> <a href="https://doi.org/10.1137/0330071">doi</a></li>
+          <li><span class="y">1997</span>M. Corless, L. Glielmo. New converse Lyapunov theorems and related results on exponential stability. <span class="venue">Mathematics of Control, Signals, and Systems, 11(1).</span> <a href="https://doi.org/10.1007/bf02741886">doi</a></li>
+          <li><span class="y">1993</span>F. Garofalo, G. Celentano, L. Glielmo. Stability robustness of interval matrices via Lyapunov quadratic forms. <span class="venue">IEEE Trans. Automatic Control, 38(2).</span> <a href="https://doi.org/10.1109/9.250472">doi</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="allpubs">→ Complete list on <a href="https://scholar.google.com/citations?user=4g8o0yUAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a>, <a href="https://orcid.org/0000-0003-2753-1787">ORCID</a> and <a href="https://www.scopus.com/authid/detail.uri?authorId=6603819476">Scopus</a>.</p>
   </div>
 </section>
 
